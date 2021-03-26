@@ -1,8 +1,8 @@
 import java.lang.StringBuilder
 import kotlin.math.min
 
-class Solution {
-    fun solution(s: String): Int {
+class Solution1 {
+    fun solution1(s: String): Int {
         var answer = s.length
 
         for(i in 1..s.length / 2) {
