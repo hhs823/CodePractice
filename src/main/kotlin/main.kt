@@ -1,9 +1,6 @@
 class Solution {
-    fun solution(n: Int): IntArray {
-        var answer: IntArray = intArrayOf()
-
-
-
+    fun solution(s: String): Int {
+        var answer = 0
         return answer
     }
 }
