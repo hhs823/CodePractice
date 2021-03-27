@@ -1,6 +1,6 @@
-class Solution {
+class Solution3 {
     private val combs = mutableListOf<String>()
-    fun solution(orders: Array<String>, course: IntArray): Array<String> {
+    fun solution3(orders: Array<String>, course: IntArray): Array<String> {
         val answer = mutableListOf<String>()
         val records = mutableMapOf<String, Int>()
 
