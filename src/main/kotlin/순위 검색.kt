@@ -1,7 +1,7 @@
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Solution {
+class Solution7 {
     fun solution(info: Array<String>, query: Array<String>): IntArray = Prob3(info, query).solve()
 
 }
