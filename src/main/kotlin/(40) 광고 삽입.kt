@@ -1,4 +1,4 @@
-class Solution {
+class Solution40 {
     fun solution(play_time: String, adv_time: String, logs: Array<String>): String {
         var answer = "00:00:00"
         val play = convertTime(play_time)
