@@ -1,3 +1,6 @@
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import java.lang.StringBuilder
 
 class Solution {
@@ -12,19 +15,14 @@ class Solution {
 }
 
 fun main() {
-    val br = System.`in`.bufferedReader()
-    val (n, m) = br.readLine().split(" ").map { it.toInt() }
+    makeDeptJson()
+}
 
-    val arr = br.readLine().split(" ").map { it.toInt() }.toIntArray()
+@Serializable
+data class Dept(val no: Int, val name: String, val location: String)
 
-    val sum = arrayListOf(0, arr[0])
-    (1 until arr.size).forEach { sum.add(sum[it] + arr[it]) }
-
-    val sb = StringBuilder()
-    repeat(m) {
-        val (i, j) = br.readLine().split(" ").map { it.toInt() }
-        sb.append(sum[j] - sum[i-1]).append("\n")
-    }
-
-    print(sb.toString())
+fun makeDeptJson() {
+    val dept = Dept(1, "Marketing", "USA/Seattle")
+    val deptJson = Json.encodeToString(dept)
+    println(deptJson)
 }
